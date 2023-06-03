@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: titlefont;
+}
+
+body {
+  font-size: 30px;
+  background: #131313;
+  background-image: url(img-site/tricolor.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+@font-face {
+  font-family: titlefont;
+  src: url(fonts/Poppins-Regular.otf);
+}
+
+
+.header {
+  margin: 50px auto 0px;
+  color: white;
+  background-image: linear-gradient(to right, #757f9a, #8690a8, #98a1b7, #aab3c5, #bdc5d4, #bdc5d4, #bdc5d4, #bdc5d4, #aab3c5, #98a1b7, #8690a8, #757f9a);
+  opacity: 0.9;
+  text-align: center;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+  width: 40%;
+  margin-top: 10px;
+}
+
+#primarie, #categorie{
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    width: auto;
+    height: 40px;
+    border: 1px thin solid black;
+    max-width: 60%;
+}
+
+
+#descriere{
+  font-size: 16px;
+}
+
+
+#pictures{
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: auto;
+    height: 40px;
+    border: 1px thin solid black;
+    max-width: 60%;
+}
+
+form, .content {
+  width: 40%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 20px;
+  background: white;
+  opacity: 0.9;
+  border-radius: 0px 0px 10px 10px;
+  text-align: center;
+}
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+
+input{
+  font-size: 20px;
+}
+
+.input-group label {
+  display: block;
+  text-align: center;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 60%;
+  padding: 5px 10px;
+  font-size: auto;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  background-image: linear-gradient(to right, #757f9a, #8690a8, #98a1b7, #aab3c5, #bdc5d4, #bdc5d4, #bdc5d4, #bdc5d4, #aab3c5, #98a1b7, #8690a8, #757f9a);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+button, .btn:hover{
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(to right, #757f9a, #8690a8, #98a1b7, #aab3c5, #bdc5d4, #bdc5d4, #bdc5d4, #bdc5d4, #aab3c5, #98a1b7, #8690a8, #757f9a);
+}
+
+.error {
+  width: auto; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+.success {
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+
+textarea{
+  width: 60%;
+  min-height: 75px;
+  outline: none;
+  resize: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.break{
+  display: none;
+}
+
+@media(max-width: 1150px) {
+  body{
+    margin: 0px;
+  }
+
+  .break{
+    display: block;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+  .header {
+    margin: 50px auto 0px;
+    margin-top: 0px;
+    color: white;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    width: auto;
+  }
+  form, .content {
+    width: auto;
+    height: auto;
+    margin: 0px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .input-group {
+    margin: 10px 0px 10px 0px;
+  }
+  .input-group label {
+    display: block;
+    text-align: center;
+    margin: 3px;
+  }
+
+  .input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: auto;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+
+  textarea{
+    width: 93%;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+  
+  .error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+  }
+  .success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+  }
+}
+
+:placeholder-shown{
+  font-size: 16px;
+}
+
+label{
+  font-size: 26px;
+}

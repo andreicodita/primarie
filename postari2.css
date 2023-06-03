@@ -1,0 +1,164 @@
+.postare  img{
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .sectiune{
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: -1px 0 10px black;
+    overflow: hidden;
+    width: auto;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: auto;
+    display: block;
+  }  
+  
+  .descriere{
+    font-size: 22px;
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+    background-color: whitesmoke;
+    border: none;
+  }
+  
+  .anunt{
+      float: left;
+      padding: 20px;
+      width: 100%;
+      background-color: #f1f1f1;
+      height: auto;    
+  }
+  
+  .cdata1{
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 830px){
+  
+    .primar{
+      display: table-row;
+      text-align: center;
+      margin-bottom: 10px;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .primar img{
+      width: 100%;
+    }
+
+    .postare{
+      display: table-row;
+    }
+ 
+  }
+
+  .under{
+    display: table;
+    width: 100%;
+  }
+  
+  h2{
+    font-size: 32px;
+    text-align: end;
+  }
+  
+  .postnav1 {
+    float: left;
+    width: 100%;
+    background: #858383;
+    padding: 20px;
+    height: auto;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  
+  .id{
+    margin-right: 5px;
+  }
+  
+  .postare{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: auto;
+    background-color: white;
+  }
+  
+  .cdata{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 26px;
+  }
+  
+  .titlu{
+      text-align: center;
+      font-size: 26px;
+      background-color: #f1f1f1;
+  }
+  
+  span{
+    font-size: 17px;
+  }
+  
+  .button1{
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    background-color: #800000;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-style: groove;
+    border-color: #800000;
+  }
+  
+  .button1:hover{
+    color: black; 
+    cursor: pointer;
+    background-color: white;
+    border-color: red;
+  }
+  
+  .button4{
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background-color: #858383;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-style: groove;
+    border-color: transparent;
+    justify-content: center;
+  }
+  
+  .button4:hover{
+    color: black; 
+    cursor: pointer;
+    background-color: white;
+    border-color: black;
+  }

@@ -1,0 +1,139 @@
+*{
+    font-family: titlefont;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .bg-img{
+    background-image: url(img-site/stema.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    background-size: cover;
+    min-height: 100vh;
+  }
+    
+  @font-face {
+    font-family: titlefont;
+    src: url(fonts/Oswald-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: font;
+    src: url(fonts/Oswald-Bold.ttf);
+  }
+
+  .navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    z-index: 1;
+    width: auto;
+    margin: 0  auto;
+    padding: 0 50px;
+    border: 1px thin solid white;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+p{
+    text-align: end;
+}
+
+img{
+    max-height: 20px;
+    margin-bottom: -5px;
+}
+.navbar_container2{
+    display: flex;
+    margin-top: 20%;
+    margin-bottom: auto;
+    background-color: #f1f1f1;
+    max-width: fit-content;
+    margin-left: 23%;
+    margin-right: 23%;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+#navbar_logo{
+    color: black;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: font;
+}
+
+#navbar_logo1{
+  color: black;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: font;
+}
+
+#primarie{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 26px;
+    width: auto;
+    border: none;
+  }
+
+  #primarie select{
+    display: inline;
+  }
+
+  .btn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 22px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: lightgray;
+  }
+
+  @media screen and (max-width: 960px){
+    #primarie{
+      font-size: 24px;
+    }
+    
+    #navbar_logo{
+      font-size: 24px;
+      text-align: justify;
+      margin-left: -30px;
+      max-width: 50%;
+    }
+
+    .btn{
+        align-items: center;
+    }
+
+    p{
+      text-align: end;
+      font-size: 14px;
+      margin-right: -30px;
+  }
+  
+  img{
+      max-height: 15px;
+      margin-bottom: -5px;
+  }
+
+  .navbar_container2{
+    margin-top: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  }
