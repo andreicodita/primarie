@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(90deg, rgba(12,0,182,1) 33%, rgba(237,255,0,1) 33%, rgba(237,255,0,1) 50%, rgba(237,255,0,1) 67%, rgba(205,0,0,1) 67%);
+    backdrop-filter: blur(75px);
+    font-family: font2;
+}
+
+.card{
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 7px 12px 20px rgb(0 0 0 / 0.2);
+}
+
+select{
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #f1f1f1 !important;
+    border-color: #f1f1f1;
+}
+
+.btn{
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fonts/Oswald-Bold.ttf);
+}

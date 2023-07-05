@@ -1,0 +1,49 @@
+/* navbar styling */
+.navbar-nav .nav-item .nav-link:hover {
+    color: navy;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: black;
+    font-family: font1;
+}
+
+.navbar .navbar-brand{
+    color: black;
+    font-family: font1;
+}
+
+.navbar .navbar-brand:hover{
+    color: black;
+}
+
+.navbar{
+    background-color: #f1f1f1 !important;
+}
+
+.navbar .nav-item .nav-link:focus{
+    color: navy;
+}
+
+.dropdown-menu{
+    background-color: #f1f1f1 !important;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: transparent;
+    color: navy;
+}
+
+
+
+
+
+body{
+    font-family: font1;
+    background-color: black;
+}
