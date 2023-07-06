@@ -16,7 +16,19 @@
 <body>
 <?php include('header.php'); ?>
 <div class="h-100 d-flex align-items-center justify-content-center">
-<?php if(isset($_SESSION['resedinta']))
+<?php if (isset($_SESSION['success'])) : ?>
+            <div class="success w-50 mx-auto" style="z-index:999;">
+						<div class="alert alert-success alert-dismissible fade show mx-auto fs-5" role="alert">
+						<?php echo $_SESSION['success']; ?>
+							<button type="button" class="btn close float-end button" style="vertical-align: middle; font-size:10px;" data-bs-dismiss="alert" aria-label="Close">
+								<i class="fa-solid fa-x"></i>
+							</button>
+						</div>
+                    <?php unset($_SESSION['success']);?>
+            </div>
+    <div>
+                <?php endif ?>
+                <?php if(isset($_SESSION['resedinta']))
                 {
                     $resedinta = $_SESSION['resedinta'];
                     $imgpath = "img-site/Primar".$_SESSION['resedinta'].".png";
@@ -25,7 +37,7 @@
                     $row = $result->fetch_assoc();
                     echo $row['svg'];
                 }?>
-</div>
+    </div>
 <div data-aos="fade-left"
      data-aos-anchor="#trigger-right"
      data-aos-offset="1300"

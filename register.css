@@ -37,3 +37,7 @@ body{
     overflow: hidden;
     background-image: linear-gradient(to bottom, #e7e7e7, #e2e3e6, #dbdfe5, #d2dde3, #c9dae0);
 }
+
+.back{
+    background-image: linear-gradient(to bottom, #e7e7e7, #e2e3e6, #dbdfe5, #d2dde3, #c9dae0);
+}

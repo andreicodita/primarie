@@ -1,0 +1,49 @@
+@font-face {
+    font-family: font1;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
+
+.card-title{
+    font-family: font2;
+}
+
+*{
+    font-family: font1;
+}
+
+.btn-danger:hover{
+    background-color: #9a1515;
+}
+
+.btn-danger{
+    background-color: #ce0808;
+}
+
+.btn-outline-light{
+    color: black !important;
+    background-color: #A8BDC4 !important;
+}
+
+.btn-outline-light:hover{
+    background-color: #c9dae0 !important;
+}
+
+
+.alert{
+    color: black;
+    font-family: font1;
+}
+
+table{
+    background-color: rgb(241,241,241, 0.7) !important;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #e7e7e7, #e2e3e6, #dbdfe5, #d2dde3, #c9dae0) !important;
+}

@@ -6,21 +6,25 @@
   <title>Pagina de logare</title>
   <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/adb91f1c55.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
 <div class="row align-items-center" style="height: 100vh;">
-  <form method="post" action="login.php" class="mx-auto col-10 col-md-8 col-lg-6 text-center rounded">
-  <h1>Logare</h1>
+  <?php include('errors.php'); ?>
   <?php if (isset($_SESSION['error'])) : ?>
-            <div class="error">
-                    <?php
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                    ?>
+            <div class="error w-50 mx-auto fixed-top fs-5" style="z-index:999;">
+						<div class="alert alert-danger alert-dismissible fade show mx-auto" role="alert">
+						<?php echo $_SESSION['error']; ?>
+							<button type="button" class="btn close float-end" style="vertical-align: middle; font-size:10px;" data-bs-dismiss="alert" aria-label="Close">
+								<i class="fa-solid fa-x"></i>
+							</button>
+						</div>
+                    <?php unset($_SESSION['error']);?>
             </div>
         <?php endif ?>
-  	<?php include('errors.php'); ?>
+  <form method="post" action="login.php" class="mx-auto col-10 col-md-8 col-lg-6 text-center rounded">
+  <h1 class="mb-4">Logare</h1>
 	<div class="mb-3 w-75 mx-auto fs-5">
 		<label for="email" class="form-label">Email</label>
 		<input class="form-control" id="email" name="email" placeholder="user@gmail.com">

@@ -6,13 +6,14 @@
   <title>Pagina de inregistrare</title>
   <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/adb91f1c55.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
 <div class="row align-items-center" style="height: 100vh;">
-  <form method="post" action="register.php" class="mx-auto col-10 col-md-8 col-lg-6 text-center rounded">
-  <h1>Înregistrare</h1>
-  	<?php include('errors.php'); ?>
+<?php include('errors.php'); ?>
+  <form method="post" action="register.php" class="col-10 col-md-8 col-lg-6 text-center rounded position-absolute top-50 start-50 translate-middle">
+  <h1 class="mb-4">Înregistrare</h1>
   	<div class="mb-3 w-75 mx-auto fs-5">
 		<label for="nume" class="form-label">Nume</label>
 		<input class="form-control" id="nume" name="nume" placeholder="Nume" value="<?php echo $nume; ?>">
@@ -28,7 +29,7 @@
 	<div class="mb-3 fs-5">
   	  <label class="form-label">Reședință</label>
 		<label for="primarie">
-                    <select id="primarie" name="primarie" class="form-select">
+                    <select id="primarie" name="primarie" class="form-select fs-5">
                     <?php 
                       include("database.php");
                       $query ="SELECT resedinta_nume FROM resedinte";

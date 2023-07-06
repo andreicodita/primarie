@@ -8,6 +8,11 @@
     src: url(fonts/Oswald-Regular.ttf);
 }
 
+@font-face {
+    font-family: font2;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
 .navbar-nav .nav-item .nav-link{
     color: black;
     font-family: font1;
@@ -52,6 +57,11 @@
     }
 }
 
+.date-dropdown{
+    font-family: font2;
+    margin-bottom: 0;
+}
+
 /* body styling */
 
 body{
@@ -66,8 +76,8 @@ html {
 /* background gradient animation */
 
 body{
-    background-image: linear-gradient(-45deg, #859fa7, #7797a3, #698e9f, #5c859b, #507c98, #487797, #407296, #396d95, #316b96, #296897, #1f6698, #126399);
-    /*background-image: linear-gradient(-45deg, #4abebe, #00b1c5, #00a3cb, #0093ce, #0081cb, #0073c7, #0065c2, #0056bb, #0048b5, #003aae, #0d2aa6, #1b159c); 
+    background-image: linear-gradient(-45deg, #4abebe, #00b1c5, #00a3cb, #0093ce, #0081cb, #0073c7, #0065c2, #0056bb, #0048b5, #003aae, #0d2aa6, #1b159c); 
+    /*background-image: linear-gradient(-45deg, #859fa7, #7797a3, #698e9f, #5c859b, #507c98, #487797, #407296, #396d95, #316b96, #296897, #1f6698, #126399);
     background-image: linear-gradient(-45deg, #092834, #002e41, #00334e, #00385b, #003c68, #003a6d, #003771, #003475, #002971, #001e6c, #001165, #04005e); */
 	background-size: 400% 400%;
 	animation: gradient 17s ease infinite;
@@ -115,3 +125,19 @@ svg{
   }
 
 
+/* button styling */
+
+.button{
+    color: black !important;
+    background-color: #A8BDC4 !important;
+}
+
+.button:hover{
+    background-color: #c9dae0 !important;
+}
+
+/* image styling */
+
+.imagine{
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25) !important;
+  }

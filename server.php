@@ -42,12 +42,11 @@ if (isset($_POST['reg_user'])) {
       'cost' => 12,
   ];
   $hashed = password_hash($password_1, PASSWORD_BCRYPT, $options);
-    echo $hashed;
   	$query = "INSERT INTO users (nume, prenume, email, password, resedinta) 
   			  VALUES('$nume', '$prenume', '$email', '$hashed', '$resedinta')";
   	mysqli_query($db, $query);
   	$_SESSION['email'] = $email;
-  	//header('location: index.php');
+  	header('location: index.php');
   }
 }
 
@@ -81,4 +80,15 @@ if (isset($_POST['login_user'])) {
   	}
   }
 }
+
+if(isset($_POST["reg_user"]))
+  if (count($errors) == 0){
+    $_SESSION['success'] = "Contul a fost creat!";
+  	header('location: index.php');}
+
+if(isset($_POST["login_user"]))
+  if (count($errors) == 0){
+    $_SESSION['success'] = "Ești logat!";
+    header('location: index.php');}
+
 ?>

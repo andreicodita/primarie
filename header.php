@@ -20,13 +20,13 @@ include('welcome-server.php');?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Acasă</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Acasă</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Postări</a>
+                    <a class="nav-link" href="postari.php">Postări</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Scrie o postare</a>
+                    <a class="nav-link" href="post.php">Scrie o postare</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="welcome.php">Schimbă reședința</a>
@@ -39,11 +39,17 @@ include('welcome-server.php');?>
                         <li><a class="dropdown-item" href="register.php">Înregistrează-te</a></li>
                         <li><a class="dropdown-item" href="login.php">Loghează-te</a></li>
                         <?php  if (isset($_SESSION['email'])){
+                            ?>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="text-center">
+                        <?php
                             $sql = "SELECT functie, resedinta, nume, prenume FROM users WHERE email ='".$_SESSION['email']."'";
                             $result = mysqli_query($db, $sql);
                             if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
-                                echo "Nume: " . $row["nume"]. " " . $row["prenume"]. "<br>" . "Funcție: " . $row["functie"] . "<br> Reședința: " . $row["resedinta"];
+                                echo "<p class='date-dropdown'>Nume:</p>" . $row["nume"]. " " . $row["prenume"]. "<br>" . "<p class='date-dropdown'>Funcție: </p>" . $row["functie"] . "<br> <p class='date-dropdown'>Reședința:</p> " . $row["resedinta"];
                                 $functie = $row['functie'];
                                 if($functie == "admin")
                                 $resedintaadmin = $row['resedinta'];
@@ -53,8 +59,12 @@ include('welcome-server.php');?>
                                 }}}
                             if(isset($_SESSION['email']))
                                 if($functie == "admin general" || $functie == "admin" && $resedintaadmin == $_SESSION['resedinta']){?>
-                        <li><a class="dropdown-item" href="#">Conturi</a></li>
-                        <li><a class="dropdown-item" href="#">Scrie un anunț</a></li><?php }?>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="conturi.php">Conturi</a></li>
+                        <li><a class="dropdown-item" href="anunt.php">Scrie un anunț</a></li><?php }?>
                         <?php if(isset($_SESSION["email"])){ ?>
                         <li>
                             <hr class="dropdown-divider">

@@ -8,6 +8,7 @@ $categorie = "";
 $errors = array(); 
 
 $db = new mysqli($hostName, $userName, $password, $databaseName);
+$db->query("SET NAMES utf8"); 
 if(!isset($_SESSION["email"]))
 {
   $_SESSION['error'] = "Trebuie să fii logat pentru a crea o postare";
