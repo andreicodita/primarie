@@ -39,11 +39,79 @@
     color: navy;
 }
 
+.dropdown-menu{
+    animation: .5s slidedown;
+}
 
+@keyframes slidedown {
+    from{
+        transform: translateY(-10%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
 
-
+/* body styling */
 
 body{
     font-family: font1;
-    background-color: black;
+    overflow-x: hidden;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* background gradient animation */
+
+body{
+    background-image: linear-gradient(-45deg, #859fa7, #7797a3, #698e9f, #5c859b, #507c98, #487797, #407296, #396d95, #316b96, #296897, #1f6698, #126399);
+    /*background-image: linear-gradient(-45deg, #4abebe, #00b1c5, #00a3cb, #0093ce, #0081cb, #0073c7, #0065c2, #0056bb, #0048b5, #003aae, #0d2aa6, #1b159c); 
+    background-image: linear-gradient(-45deg, #092834, #002e41, #00334e, #00385b, #003c68, #003a6d, #003771, #003475, #002971, #001e6c, #001165, #04005e); */
+	background-size: 400% 400%;
+	animation: gradient 17s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* hide scrollbar */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* svg animation styling */
+
+svg{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    margin-right: 10px;
+    fill-opacity: 1;
+    fill: black;
+    stroke-width: 2px;
+    stroke-dasharray: 10000;
+    stroke-dashoffset: 10000;
+    animation: dash 20s linear forwards;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+

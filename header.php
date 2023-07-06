@@ -37,7 +37,7 @@ include('welcome-server.php');?>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class='fas'>&#xf406;</i> Cont </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-ligbt bg-light fs-5" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="register.php">Înregistrează-te</a></li>
-                        <li><a class="dropdown-item" href="#">Loghează-te</a></li>
+                        <li><a class="dropdown-item" href="login.php">Loghează-te</a></li>
                         <?php  if (isset($_SESSION['email'])){
                             $sql = "SELECT functie, resedinta, nume, prenume FROM users WHERE email ='".$_SESSION['email']."'";
                             $result = mysqli_query($db, $sql);
@@ -59,7 +59,7 @@ include('welcome-server.php');?>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-danger" href="logout.php?logout='1'">Deloghează-te<i class="fa-solid fa-right-to-bracket text-danger"></i></a></li><?php }?>
+                        <li><a class="dropdown-item text-danger" href="logout.php?logout='1'"><i class="fas fa-sign-out text-danger"></i> Deloghează-te</a></li><?php }?>
                     </ul>
                 </li>
             </ul>

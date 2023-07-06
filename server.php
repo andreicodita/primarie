@@ -38,13 +38,16 @@ if (isset($_POST['reg_user'])) {
 
 
   if (count($errors) == 0) {
-  	$password = md5($password_1);
-
+    $options = [
+      'cost' => 12,
+  ];
+  $hashed = password_hash($password_1, PASSWORD_BCRYPT, $options);
+    echo $hashed;
   	$query = "INSERT INTO users (nume, prenume, email, password, resedinta) 
-  			  VALUES('$nume', '$prenume', '$email', '$password', '$resedinta')";
+  			  VALUES('$nume', '$prenume', '$email', '$hashed', '$resedinta')";
   	mysqli_query($db, $query);
   	$_SESSION['email'] = $email;
-  	header('location: index.php');
+  	//header('location: index.php');
   }
 }
 
@@ -61,14 +64,20 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {
-  	$password = md5($password);
-  	$query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-  	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['email'] = $email;
-  	  header("location: index.php");
-  	}else {
-  		array_push($errors, "Datele introduse sunt gresite");
+    $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+    $result = $db->query($sql);
+    $row = $result->fetch_assoc();
+    $hashed = $row['password'];  
+  	if(password_verify($password, $hashed))
+  	{
+      header("location: index.php");
+      $query = "SELECT * FROM users WHERE email='$email'";
+  	  $results = mysqli_query($db, $query);
+  	  if (mysqli_num_rows($results) == 1) {
+  	    $_SESSION['email'] = $email;
+  	    header("location: index.php");
+  	}}else {
+  		array_push($errors, "Datele introduse sunt gresite"); 
   	}
   }
 }

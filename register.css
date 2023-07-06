@@ -1,0 +1,39 @@
+form{
+    background-color: rgb(241,241,241, 0.7) !important;
+}
+
+.btn{
+    color: black !important;
+    background-color: #A8BDC4 !important;
+}
+
+.btn:hover{
+    background-color: #c9dae0 !important;
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: font1;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+h1{
+    font-family: font2;
+    padding-top: 10px;
+}
+
+*{
+    font-family: font1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #e7e7e7, #e2e3e6, #dbdfe5, #d2dde3, #c9dae0);
+}

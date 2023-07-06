@@ -4,30 +4,31 @@
 <html>
 <head>
   <title>Pagina de inregistrare</title>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
-  <div class="header">
-  	<h2>Înregistrare</h2>
-  </div>
-  <form method="post" action="register.php">
+<div class="row align-items-center" style="height: 100vh;">
+  <form method="post" action="register.php" class="mx-auto col-10 col-md-8 col-lg-6 text-center rounded">
+  <h1>Înregistrare</h1>
   	<?php include('errors.php'); ?>
-  	<div class="input-group">
-  	  <label>Nume</label>
-  	  <input type="text" name="nume" value="<?php echo $nume; ?>">
-  	</div>
-	<div class="input-group">
-  	  <label>Prenume</label>
-  	  <input type="text" name="prenume" value="<?php echo $prenume; ?>">
-  	</div>
-  	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
-  	</div>
-	<div class="input-group">
-  	  <label>Reședință</label>
+  	<div class="mb-3 w-75 mx-auto fs-5">
+		<label for="nume" class="form-label">Nume</label>
+		<input class="form-control" id="nume" name="nume" placeholder="Nume" value="<?php echo $nume; ?>">
+	</div>
+	<div class="mb-3 w-75 mx-auto fs-5">
+		<label for="prenume" class="form-label">Prenume</label>
+		<input class="form-control" id="prenume" name="prenume" placeholder="Prenume" value="<?php echo $prenume; ?>">
+	</div>
+  	<div class="mb-3 w-75 mx-auto fs-5">
+		<label for="email" class="form-label">Adresa de email</label>
+		<input class="form-control" id="email" name="email" placeholder="user@gmail.com" value="<?php echo $email; ?>">
+	</div>
+	<div class="mb-3 fs-5">
+  	  <label class="form-label">Reședință</label>
 		<label for="primarie">
-                    <select id="primarie" name="primarie">
+                    <select id="primarie" name="primarie" class="form-select">
                     <?php 
                       include("database.php");
                       $query ="SELECT resedinta_nume FROM resedinte";
@@ -46,21 +47,22 @@
                     </select>
         </label>
   	</div>
-  	<div class="input-group">
-  	  <label>Parolă</label>
-  	  <input type="password" name="password_1">
+	<div class="mb-3 w-75 mx-auto fs-5">
+		<label for="password" class="form-label">Parola</label>
+		<input type="password" class="form-control" id="password_1" name="password_1">
+  	</div>
+	<div class="mb-3 w-75 mx-auto fs-5">
+		<label for="password" class="form-label">Confirmă parola</label>
+		<input type="password" class="form-control" id="password_2" name="password_2">
   	</div>
   	<div class="input-group">
-  	  <label>Confirmă parola</label>
-  	  <input type="password" name="password_2">
+		<button type="submit" class="btn btn-outline-light mx-auto fs-5" name="reg_user">Înregistrează-te</button>
   	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Înregistrează-te</button>
-  	</div>
-  	<p>
-  		Ai deja cont? <br class="break"><a class="btn" href="login.php">Loghează-te</a>
-		<a class="btn" href="index.php">Acasă</a>
+  	<p class="fs-5">
+  		Ai deja cont? <br class="break"><a class="btn btn-outline-light fs-5" href="login.php">Loghează-te</a>
+		<a class="btn btn-outline-light fs-5" href="index.php">Acasă</a>
   	</p>
-  </form>
+	</form>
+</div>
 </body>
 </html>
