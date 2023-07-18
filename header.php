@@ -36,17 +36,16 @@ include('welcome-server.php');?>
                 <li class="nav-item dropdown fs-5">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class='fas'>&#xf406;</i> Cont </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-ligbt bg-light fs-5" aria-labelledby="navbarDropdown">
+                    <?php  if (!isset($_SESSION['email'])){?>
                         <li><a class="dropdown-item" href="register.php">Înregistrează-te</a></li>
                         <li><a class="dropdown-item" href="login.php">Loghează-te</a></li>
+                    <?php } ?>
                         <?php  if (isset($_SESSION['email'])){
                             ?>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
                         <li class="text-center">
                         <?php
                             $sql = "SELECT functie, resedinta, nume, prenume FROM users WHERE email ='".$_SESSION['email']."'";
-                            $result = mysqli_query($db, $sql);
+                            $result = $conn->query($sql);
                             if (mysqli_num_rows($result) > 0) {
                             while($row = mysqli_fetch_assoc($result)) {
                                 echo "<p class='date-dropdown'>Nume:</p>" . $row["nume"]. " " . $row["prenume"]. "<br>" . "<p class='date-dropdown'>Funcție: </p>" . $row["functie"] . "<br> <p class='date-dropdown'>Reședința:</p> " . $row["resedinta"];

@@ -15,6 +15,7 @@
     <?php include('header.php'); ?>
     <div class="conturi">
     <?php
+    $db->query("SET NAMES utf8"); 
     if($stmt = $db->query("SELECT * FROM users"))  {
       if($functie == "admin general")
         echo "<div class='alert alert-light mx-auto fs-5' role='alert' style='height: auto; padding: 0; margin: 0; margin-bottom: 10px; margin-top: 10px; max-width: 380px'><h2>Numărul de conturi: ".$stmt->num_rows."<br></h2></div>";
@@ -30,7 +31,7 @@
                   </div>
           <div>
               <?php endif;}
-        echo "<table class='table'>
+        echo "<table class='table fs-5'>
             <tr>
             <th scope='col'>Id</th>
             <th scope='col'>Nume</th>

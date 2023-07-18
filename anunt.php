@@ -15,7 +15,7 @@
 <body>
 <div class="row align-items-center" style="height: 100vh;">
 <?php include('errors.php'); ?>
-  <form method="post" action="register.php" class="col-10 col-md-8 col-lg-6 text-center rounded position-absolute top-50 start-50 translate-middle">
+  <form method="post" action="anunt.php" enctype="multipart/form-data" class="col-10 col-md-8 col-lg-6 text-center rounded position-absolute top-50 start-50 translate-middle">
   <h1 class="mb-4">Anunț</h1>
  	<div class="mb-3 w-75 mx-auto fs-5">
 		<label for="titlu" class="form-label">Titlu</label>
@@ -32,7 +32,7 @@
 	<?php if(isset($_SESSION['functie']))
 	if($_SESSION['functie'] == "admin general"){ ?>
 	<div class="mb-3 w-75 mx-auto fs-5">
-  	  <label>Reședință</label>
+  	  <label>Reședința:</label>
 		<label for="primarie">
                     <select id="primarie" name="primarie" class="mb-3 w-75 mx-auto fs-5">
                     <?php 

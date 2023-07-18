@@ -2,6 +2,7 @@
 session_start();
 include('database.php');
 $db = new mysqli($hostName, $userName, $password, $databaseName);
+$db->query("SET NAMES utf8"); 
 if(isset($_GET['post_id'])){
     $id_post = $_GET['post_id'];
     $query = "SELECT imagine_nume FROM postari WHERE id_postare = $id_post";
